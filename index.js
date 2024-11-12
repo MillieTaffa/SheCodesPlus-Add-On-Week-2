@@ -17,6 +17,15 @@ function updateTime() {
         parisDate.innerHTML = currentTimeP.format("MMMM Do YYYY");
         parisTime.innerHTML = `${currentTimeP.format('h:mm:ss')} <small>${currentTimeP.format("A")}</small>`;
     }
+
+    let belgium = document.querySelector("#belgium");
+    if (belgium) {
+        let belgiumDate = belgium.querySelector(".date");
+        let belgiumTime = belgium.querySelector(".time");
+        let currentTimeB = moment().tz("Europe/Belgium");
+        belgiumDate.innerHTML = currentTimeB.format("MMMM Do YYYY");
+        belgiumTime.innerHTML = `${currentTimeB.format('h:mm:ss')} <small>${currentTimeB.format("A")}</small>`;
+    }
 };
 
 // Function to update city time and display it
